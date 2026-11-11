@@ -11,7 +11,7 @@ The BSD-2-Clause and MIT licences require their copyright notice and licence tex
 GB Mod Loader - Dusty
 
 ## Installed on your PC, not bundled
-The installer (`ToolBox.bat`) fetches Python packages from PyPI into the app's own `.venv`: Flask, pywebview, Requests, Pillow, NumPy, SciPy, OpenCV (opencv-python-headless), Matplotlib and PyOsmium. Each keeps its own open-source licence, which pip installs with it. They aren't part of the Software. The same goes for PWCG (Pat Wilson's Campaign Generator) and for PRISM and HSDSync if you have them: they are separate programs under their own authors' terms, and this project isn't affiliated with them.
+The installer (`installer.bat`) fetches Python packages from PyPI into the app's own `.venv`: Flask, pywebview, Requests, Pillow, NumPy, SciPy, OpenCV (opencv-python-headless), Matplotlib and PyOsmium. Each keeps its own open-source licence, which pip installs with it. They aren't part of the Software. The same goes for PWCG (Pat Wilson's Campaign Generator) and for PRISM and HSDSync if you have them: they are separate programs under their own authors' terms, and this project isn't affiliated with them.
 
 ## Data
 - Map tiles and waterways (c) OpenStreetMap contributors, ODbL. Tiles come through the local proxy (own User-Agent, 7-day cache), search one request a second. Everything else OSM comes from Geofabrik's regional extracts, downloaded once per region. Packs built from it must keep the "(c) OpenStreetMap contributors" credit.

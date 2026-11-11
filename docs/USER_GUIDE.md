@@ -21,7 +21,7 @@ same map on every build, offline too. A build that can't get them stops and says
 (`Documents\Pingu's Plotting Table\Templates`): edit and share them; any other template file dropped in shows up too. **Jungle Hawks** switch (with a JH release in MODS): the JH
 planes, countries, skins, preset squadrons, Pacific buildings and jungle tiles, and the green look, all read from your installed mod.
 
-**Start:** `ToolBox.bat`. The app runs on Python 3.13 only (3.14 or newer as the PC's main Python is fine and stays as it is).
+**Start:** `installer.bat`. The app runs on Python 3.13 only (3.14 or newer as the PC's main Python is fine and stays as it is).
 The bat takes an installed Python 3.13 (through the `py` launcher) or, with none, downloads a private copy: python.org's Windows
 build of 3.13.17 from nuget.org, SHA-256 checked, unpacked into `.python\` (nothing is installed, no registry change). A `.venv` on any
 other version is thrown away and rebuilt. If no 3.13 can be found or fetched it stops with the fixes (`py install 3.13`, or the newest
@@ -72,8 +72,8 @@ rebake works on it, so a partial rebake shows exactly which sections it touches.
 Walkthrough of every step and a Helper that puts a ? on each one. Every answer has three views on the rotary switch: Plain English, In the Game
 and Under the Hood. Its text is English only so far.
 
-Open the app with `ToolBox.pyw`, or the `Pingu's Plotting Table` shortcut that `ToolBox.bat` writes beside it: no terminal shows.
-Use `ToolBox.bat` again after updating, because it installs any new libraries.
+Open the app with `ToolBox.pyw`, or the `Pingu's PT Installer` shortcut that `installer.bat` writes beside it: no terminal shows.
+Use `installer.bat` again after updating, because it installs any new libraries.
 
 ## Mission editor
 
@@ -120,7 +120,7 @@ Simplified Chinese and Japanese. Those translations are machine-written, so corr
    width. Strips are flattened, cleared of trees and get runway smoothing (+ Marston mat on Normandy). A strip that
    lands on water or a cliff is nudged to the nearest dry, flat ground.
 5. **Build** - each stage shows its own progress bar; stages whose inputs did not change are reused (tick "rebuild
-   every stage" to force). The pack lands in `<game>\MODS\Pingu's ToolBox - <name> <n>` as a NEW, DISABLED
+   every stage" to force). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.1]` (`<Map Name> 2 [Pingu'sPTv1.1]` for the next build of the same map; the number after `v` is the app's version) as a NEW, DISABLED
    folder (never over an existing or enabled one, always real copies). Enable it in JSGME last: above Jungle Hawks
    for the jungle set, with Jungle Hawks disabled for any other tile set (the pack then carries the map loader).
 
@@ -142,29 +142,29 @@ itself, so fly each new map once to confirm it.
 
 ## Multiplayer and dedicated servers
 
-Every pack carries GB Mod Loader 1.4.2 with one plugin, loosemaps, and a dedicated-server kit at its root, `ToolBox server - <name> <n>\`.
-It is not yet tried on a real dedicated server, so please report what `bin\game\gbml_server_log.txt` says the first time.
+Every pack carries GB Mod Loader 1.5.0 (`bin\game\winmm.dll` and `GBML.dll`) with one plugin, loosemaps, and a dedicated-server kit at its root, `<Map Name> server [Pingu'sPTv1.1]\`.
+It is not yet tried on a real dedicated server, so please report what `bin\game\gbml_log.txt` (or `gbml_server_log.txt`) says the first time.
 
-**How the map gets in online:** loosemaps is the map half of the old scriptcrc plugin (scriptcrc no longer exists in GB Mod Loader 1.4.2).
+**How the map gets in online:** loosemaps is the map half of the old scriptcrc plugin (scriptcrc no longer exists since GB Mod Loader 1.4.2).
 It lets a mission start on the pack's loose landscape only when the game's own map list unlocks that exact map for your account; a locked
 map keeps the game's own decision, in single player and in multiplayer. In multiplayer it also acts only inside a session that GB Mod Loader's
-own handshake has verified: the host or dedicated server runs the same loader and the same mod set. Loader 1.4.2 handshakes by itself
+own handshake has verified: the host or dedicated server runs the same loader and the same mod set. Loader 1.5.0 handshakes by itself
 (`[multiplayer] handshake=1`, `strict=1`, `kick=1`): a player whose loader, plugins or plugin settings differ is kicked by a server running it,
 and refuses to join a host that doesn't. loosemaps declares itself client-only, so it is left out of that match.
 
 | File | What it is |
 |---|---|
-| `bin\game\winmm.dll` | GB Mod Loader 1.4.2, the same file as the pack's own. Since loader 1.3.0 it also starts under `DServer.exe` (`[server] enabled=1`). There it runs only the plugins under `[server_plugins]` in `gbml.ini`, which is empty: the server needs no plugin for the map. As the host it runs the handshake. |
+| `bin\game\winmm.dll`, `bin\game\GBML.dll` | GB Mod Loader 1.5.0, the same files as the pack's own: `winmm.dll` is the proxy the game loads, `GBML.dll` the loader it starts (split in 1.5.0). Since loader 1.3.0 it also starts under `DServer.exe` (`[server] enabled=1`). There it runs only the plugins under `[server_plugins]` in `gbml.ini`, which is empty: the server needs no plugin for the map. As the host it runs the handshake. |
 | `bin\game\gbml.ini` | The pack's own `gbml.ini`: Dusty's template with `[multiplayer]`, `[server]` and an empty `[server_plugins]`. |
 | `map_sha256.txt` | The SHA-256 of every map file the pack lays down: `data\graphics\LANDSCAPE_*` and `data\scg\*`. |
 | `Check map files.bat` | Compares an install's map files with that list and says OK or NOT OK. With the pack enabled it sits in the game's main folder, so it checks that install. You can also drag a game folder onto it. |
 | `README - server.txt` | The steps below, for whoever runs the server. |
 
 **Server** (the IL-2 install that runs `DServer.exe`):
-1. Put the pack in that install's `MODS` folder and enable it with JSGME, as on a player's PC. This puts the map files where DServer reads them, and the pack's own `bin\game` already holds the right `winmm.dll` and `gbml.ini`. Without JSGME, copy the pack's `data` folder into the server install's main folder, and the kit's `bin\game` files into the server's `bin\game`.
+1. Put the pack in that install's `MODS` folder and enable it with JSGME, as on a player's PC. This puts the map files where DServer reads them, and the pack's own `bin\game` already holds the right `winmm.dll`, `GBML.dll` and `gbml.ini`. Without JSGME, copy the pack's `data` folder into the server install's main folder, and the kit's `bin\game` files into the server's `bin\game`.
 2. Turn Mods ON in the server's `startup.cfg`: a session hosted with GB Mod Loader must be a Mods ON session (`host_mods_on=1`).
 3. Run `Check map files.bat`. It must say OK.
-4. Start DServer and open `bin\game\gbml_server_log.txt` (or `gbml_log.txt`). You want `GB Mod Loader 1.4.2 starting ... - DEDICATED SERVER`, `build guard passed`, `handshake installed`, and `server: no plugin listed under [server_plugins] - the server runs no plugin`.
+4. Start DServer and open `bin\game\gbml_log.txt` (GB Mod Loader 1.5.0's log; `gbml_server_log.txt` if there is one). You want the loader's start line for 1.5.0 under the dedicated server, the build check passed, the multiplayer handshake installed, and no plugin loaded from `[server_plugins]`. The exact wording is the loader's own; the kit is not yet run under DServer with 1.5.0.
 
 DServer needs no plugin for the map. It has no map ownership check and reads the loose heightmap as it finds it.
 
@@ -176,11 +176,11 @@ DServer needs no plugin for the map. It has no map ownership check and reads the
 
 The server and every player must have byte-identical map files, or they fly over different ground. Build the pack once and share that one folder: a rebuild on another PC is a different pack.
 
-**Removing:** on the server, disable the pack (without JSGME, delete `bin\game\winmm.dll`, `gbml.ini`, `gbml\` and the log). Players only need to disable the pack.
+**Removing:** on the server, disable the pack (without JSGME, delete `bin\game\winmm.dll`, `GBML.dll`, `gbml.ini`, `gbml\` and the log). Players only need to disable the pack.
 
-**Checks:** the pack stage writes the kit and then checks it before the pack is finished. The kit's map list must equal the pack's map files byte for byte, its `winmm.dll` must be the bundled 1.4.2 file and the pack's own, and its `gbml.ini` must be the pack's, with `[server_plugins]`, `[server] enabled=1` and the handshake on. Any mismatch stops the pack.
+**Checks:** the pack stage writes the kit and then checks it before the pack is finished. The kit's map list must equal the pack's map files byte for byte, its `winmm.dll` and `GBML.dll` must be the bundled 1.5.0 files and the pack's own, and its `gbml.ini` must be the pack's, with `[server_plugins]`, `[server] enabled=1` and the handshake on. Any mismatch stops the pack. `engine\ll_mp.py check <game folder> <map_sha256.txt>` runs the same comparison as the .bat. `tests\test_mp.py` tests all of this.
 
-**common.dll:** no plugin in a pack may hook, patch or read through the game's `common.dll`. Neither `winmm.dll` 1.4.2 nor `loosemaps.dll` names it. A plugin of your own whose DLL names `common.dll` is left out of the pack, and the build log says why; your own copy of Formation Tweaks (`gbai`) goes in with `[Flight] briefing_titles = 0`, because that feature hooks `fopen` in every game module's import table, `common.dll`'s included.
+**common.dll:** no plugin in a pack may hook, patch or read through the game's `common.dll`. `loosemaps.dll` does not name it; the loader's own `winmm.dll` and `GBML.dll` ship as Dusty's unmodified release files, checked by SHA-256. A plugin of your own whose DLL names `common.dll` is left out of the pack, and the build log says why; your own copy of Formation Tweaks (`gbai`) goes in with `[Flight] briefing_titles = 0`, because that feature hooks `fopen` in every game module's import table, `common.dll`'s included. `tools\make_release.py` refuses a release whose bundled plugins break this rule.
 
 ## Licence
 

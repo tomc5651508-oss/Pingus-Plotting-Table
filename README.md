@@ -10,7 +10,7 @@
 
 [Download](../../releases/latest) · [Quick start](#quick-start) · [What it does](#what-it-does) · [A look around](#a-look-around) · [FAQ](#faq) · [User guide](docs/USER_GUIDE.md) · [Buy me a coffee](https://buymeacoffee.com/pingu565)
 
-![Version](https://img.shields.io/badge/version-Release1.0-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
+![Version](https://img.shields.io/badge/version-Release1.1-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
 
 ![A real coastline, towns and sea floor baked into IL-2 Great Battles](docs/images/hero-coast.jpg)
 
@@ -92,7 +92,7 @@ It's built for:
 
 - **Windows 10 or 11** with Microsoft Edge WebView2. It comes with current Windows.
 - **IL-2 Sturmovik: Great Battles**, plus the map you build on. The result swaps that map's terrain, so you need to own it.
-- **Python: nothing to install yourself.** The Plotting Table runs on **Python 3.13** only, and `ToolBox.bat` sets that up: it uses a Python 3.13 your PC already has, or downloads a private copy (about 15 MB, python.org's own Windows build from nuget.org, checked byte for byte) into the Plotting Table's `.python` folder. Python 3.14 or newer as your main Python is fine: it stays as it is.
+- **Python: nothing to install yourself.** The Plotting Table runs on **Python 3.13** only, and `installer.bat` sets that up: it uses a Python 3.13 your PC already has, or downloads a private copy (about 15 MB, python.org's own Windows build from nuget.org, checked byte for byte) into the Plotting Table's `.python` folder. Python 3.14 or newer as your main Python is fine: it stays as it is.
 - **JSGME**, or any mod enabler that handles the game's `MODS` folder, to switch packs on and off.
 - **Disk space and an internet connection** for the first build of an area. Map data downloads once per region and stays on disk, for example about 720 MB for Malta and 5 GB for the Rheinland.
 - Optional: **PWCG** to fly PWCG campaigns on your map, and **Jungle Hawks** for its Pacific planes, squadrons and jungle look.
@@ -101,19 +101,19 @@ Nothing from the game ships with the Plotting Table. It reads what it needs from
 
 ## Quick start
 
-1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.0.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
-2. **Run `ToolBox.bat`.** The first start sets up its own Python 3.13 environment (with a private Python 3.13 if your PC has none), which takes a few hundred MB and a few minutes. After that, open the Plotting Table from the `Pingu's Plotting Table` shortcut it creates, with no terminal window. The setup window names each step and each file as it downloads.
+1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.1.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
+2. **Run `installer.bat`.** The first start sets up its own Python 3.13 environment (with a private Python 3.13 if your PC has none), which takes a few hundred MB and a few minutes. After that, open the Plotting Table from the `Pingu's PT Installer` shortcut it creates, with no terminal window. The setup window names each step and each file as it downloads.
 3. **Let it read your game.** On first start it asks for your language, finds your IL-2 install, and reads its maps, planes and skins once.
 4. **Make a map.** In the Map tab, pick a starting map, drag the box over your place, choose the look, and add airfield strips.
 5. **Set up the campaign.** Define your factions and dates in Scenario, then fronts and squadrons in Campaign. **Ask Pingu**, bottom right, explains each step.
-6. **Bake.** Press **Lift off** (Ctrl+B). The pack lands in `<game>\MODS\Pingu's ToolBox - <name>` as a new, disabled folder.
+6. **Bake.** Press **Lift off** (Ctrl+B). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.1]` as a new, disabled folder (the number after `v` is the app's version; a rebuild of the same map is `<Map Name> 2 [Pingu'sPTv1.1]`).
 7. **Fly.** Close IL-2 and its editor, enable the pack last in JSGME, then start the game. Your map is a new career theatre and quick-mission setting.
 
-Run `ToolBox.bat` again after each update, because it installs any new libraries. The [user guide](docs/USER_GUIDE.md) has every tab, option and file in detail.
+Run `installer.bat` again after each update, because it installs any new libraries. The [user guide](docs/USER_GUIDE.md) has every tab, option and file in detail.
 
 ## Good to know
 
-- **Multiplayer needs the same pack everywhere.** Every pack carries a dedicated-server kit (`ToolBox server - <name>`). The server and every player need the same pack, and each player must own the base map. It is not yet tried on a real dedicated server.
+- **Multiplayer needs the same pack everywhere.** Every pack carries a dedicated-server kit (`<Map Name> server [Pingu'sPTv1.1]`). The server and every player need the same pack, and each player must own the base map. It is not yet tried on a real dedicated server.
 - **Roads are modern.** The road and rail network comes from today's OpenStreetMap, not 1942's.
 - **PWCG has fixed limits.** PWCG's own program fixes map area, front dates and ground troops, so a pack can't change them.
 - **Fly each new map once.** The build checks the pack's files, but only the game can confirm it all loads.
@@ -136,13 +136,13 @@ No. The Plotting Table is scripts only. Everything it needs from IL-2 is read fr
 <details>
 <summary><b>I have Python 3.14. Will it run?</b></summary>
 
-Yes. The Plotting Table is built and tested on Python 3.13, so it never runs on 3.14 or newer. `ToolBox.bat` looks for a Python 3.13 on your PC and, when there is none, downloads a private copy into the Plotting Table's own `.python` folder (nothing is installed on the PC and your main Python is left alone). An old `.venv` made with another version is rebuilt by itself. If the download can't happen, the window says what to do: check the connection, or run `py install 3.13` with Python 3.14's install manager, then run `ToolBox.bat` again.
+Yes. The Plotting Table is built and tested on Python 3.13, so it never runs on 3.14 or newer. `installer.bat` looks for a Python 3.13 on your PC and, when there is none, downloads a private copy into the Plotting Table's own `.python` folder (nothing is installed on the PC and your main Python is left alone). An old `.venv` made with another version is rebuilt by itself. If the download can't happen, the window says what to do: check the connection, or run `py install 3.13` with Python 3.14's install manager, then run `installer.bat` again.
 </details>
 
 <details>
 <summary><b>Can I fly my map in multiplayer?</b></summary>
 
-Yes, on a dedicated server, though it is not yet tried on a real one. Every pack carries a kit at its root, `ToolBox server - <name> <n>`, with the same GB Mod Loader 1.4.2 (it runs under `DServer.exe` too), the SHA-256 of every map file, and `Check map files.bat`.
+Yes, on a dedicated server, though it is not yet tried on a real one. Every pack carries a kit at its root, `<Map Name> server [Pingu'sPTv1.1]`, with the same GB Mod Loader 1.5.0 (`winmm.dll` + `GBML.dll`; it runs under `DServer.exe` too), the SHA-256 of every map file, and `Check map files.bat`.
 
 1. **Server:** enable the same pack in the server's IL-2 install with JSGME (its `bin\game` already holds the loader) and turn Mods ON in `startup.cfg`.
 2. **Every player:** enable the same pack (same name and number), with no other GB Mod Loader plugins than the server's: the loader's handshake kicks a player whose mod set differs, and the map plugin only acts online in a verified session. You need to own the base map: the map plugin only lets the new terrain in when your own account unlocks that map.
