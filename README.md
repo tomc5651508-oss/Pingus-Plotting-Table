@@ -115,9 +115,16 @@ Run `installer.bat` again after each update, because it installs any new librari
 
 - **Multiplayer needs the same pack everywhere.** Every pack carries a dedicated-server kit (`<Map Name> server [Pingu'sPTv1.1]`). The server and every player need the same pack, and each player must own the base map. It is not yet tried on a real dedicated server.
 - **Roads are modern.** The road and rail network comes from today's OpenStreetMap, not 1942's.
-- **PWCG has fixed limits.** PWCG's own program fixes map area, front dates and ground troops, so a pack can't change them.
 - **Fly each new map once.** The build checks the pack's files, but only the game can confirm it all loads.
 - **Prokhorovka** can't be used as a starting map yet, because of its finer 12.5 m grid.
+
+## Support
+
+The Plotting Table is free. If it gives you a good flight, you can [buy Tomsen a coffee](https://buymeacoffee.com/pingu565) to support Pingu's mods. Bug reports and ideas are just as welcome in [Issues](../../issues).
+
+<div align="center">
+
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-pingu565-ffd7af?style=for-the-badge&logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
 
 ## FAQ
 
@@ -199,7 +206,7 @@ Jobs, downloads and caches live in `%LOCALAPPDATA%\LocationLiftoff`. Templates a
 Ask Pingu (bottom right) covers each step. If a build fails, its log is in the job's work folder, and the build window says which stage stopped. Please open an [issue](../../issues) with that log and what you were doing.
 </details>
 
-## Support
+## Support Again (because this was alot of work)
 
 The Plotting Table is free. If it gives you a good flight, you can [buy Tomsen a coffee](https://buymeacoffee.com/pingu565) to support Pingu's mods. Bug reports and ideas are just as welcome in [Issues](../../issues).
 
