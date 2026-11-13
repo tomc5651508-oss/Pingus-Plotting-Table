@@ -72,7 +72,7 @@ rebake works on it, so a partial rebake shows exactly which sections it touches.
 Walkthrough of every step and a Helper that puts a ? on each one. Every answer has three views on the rotary switch: Plain English, In the Game
 and Under the Hood. Its text is English only so far.
 
-Open the app with `ToolBox.pyw`, or the `Pingu's PT Installer` shortcut that `installer.bat` writes beside it: no terminal shows.
+Open the app with `ToolBox.pyw`, or the `Pingu's PT` shortcut that `installer.bat` writes beside it: no terminal shows.
 Use `installer.bat` again after updating, because it installs any new libraries.
 
 ## Mission editor
@@ -106,6 +106,17 @@ window (full size at 1920 wide, double at 3840) unless you pick a size. The GUI 
 Simplified Chinese and Japanese. Those translations are machine-written, so corrections are welcome: `static\i18n\<lang>.txt`, one
 `<id>|<text>` per line, ids from `source.txt`.
 
+### Updates
+
+Each time it starts, before its window opens, the app asks GitHub for the latest release of Pingu's Plotting Table and compares its
+number with its own. The request sends nothing about the PC. Same number, or no answer: the app opens as normal. A newer release, with
+automatic updates on (the default): the app downloads only the files that changed (each release lists its files and their checksums in
+a manifest), checks every file, replaces them in the app's folder, and runs installer.bat again, which starts the updated app. A card
+then says what was installed. With automatic updates off, the app opens as it is and a card offers the newer release: Update now does
+the same download and repeat install. If anything goes wrong, every file goes back as it was and the app opens as normal. The maps,
+packs, missions, templates and settings in Documents\Pingu's Plotting Table and the work folder are not part of a release and stay as
+they are. The cog on the card opens Settings > Updates: the version, Check now, and the switches for the check and for automatic updates.
+
 ## Using it (Map Maker)
 1. **Starting map** - any listed map, for example Kuban (460.8 x 358.4 km, the Jungle Hawks slot) or Normandy
    (371.2 x 396.8 km, the Guadalcanal slot). You need that map in your game to fly the result. The copper box is the
@@ -120,7 +131,7 @@ Simplified Chinese and Japanese. Those translations are machine-written, so corr
    width. Strips are flattened, cleared of trees and get runway smoothing (+ Marston mat on Normandy). A strip that
    lands on water or a cliff is nudged to the nearest dry, flat ground.
 5. **Build** - each stage shows its own progress bar; stages whose inputs did not change are reused (tick "rebuild
-   every stage" to force). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.1]` (`<Map Name> 2 [Pingu'sPTv1.1]` for the next build of the same map; the number after `v` is the app's version) as a NEW, DISABLED
+   every stage" to force). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.2]` (`<Map Name> 2 [Pingu'sPTv1.2]` for the next build of the same map; the number after `v` is the app's version) as a NEW, DISABLED
    folder (never over an existing or enabled one, always real copies). Enable it in JSGME last: above Jungle Hawks
    for the jungle set, with Jungle Hawks disabled for any other tile set (the pack then carries the map loader).
 
@@ -142,7 +153,7 @@ itself, so fly each new map once to confirm it.
 
 ## Multiplayer and dedicated servers
 
-Every pack carries GB Mod Loader 1.5.0 (`bin\game\winmm.dll` and `GBML.dll`) with one plugin, loosemaps, and a dedicated-server kit at its root, `<Map Name> server [Pingu'sPTv1.1]\`.
+Every pack carries GB Mod Loader 1.5.0 (`bin\game\winmm.dll` and `GBML.dll`) with one plugin, loosemaps, and a dedicated-server kit at its root, `<Map Name> server [Pingu'sPTv1.2]\`.
 It is not yet tried on a real dedicated server, so please report what `bin\game\gbml_log.txt` (or `gbml_server_log.txt`) says the first time.
 
 **How the map gets in online:** loosemaps is the map half of the old scriptcrc plugin (scriptcrc no longer exists since GB Mod Loader 1.4.2).

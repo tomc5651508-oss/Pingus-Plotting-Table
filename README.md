@@ -10,7 +10,7 @@
 
 [Download](../../releases/latest) · [Quick start](#quick-start) · [What it does](#what-it-does) · [A look around](#a-look-around) · [FAQ](#faq) · [User guide](docs/USER_GUIDE.md) · [Buy me a coffee](https://buymeacoffee.com/pingu565)
 
-![Version](https://img.shields.io/badge/version-Release1.1-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
+![Version](https://img.shields.io/badge/version-Release1.2-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
 
 ![A real coastline, towns and sea floor baked into IL-2 Great Battles](docs/images/hero-coast.jpg)
 
@@ -42,7 +42,7 @@ It's built for:
 
 ## What it does
 
-<img src="docs/images/flight-over-city.jpg" alt="A fighter flying over a generated city" align="right" width="420">
+<img src="docs/images/flight-png-jungle.jpg" alt="A B-17 over jungle, mountains and rivers on the Papua New Guinea map" align="right" width="420">
 
 **Real-world terrain**
 - Heights from Copernicus GLO-90, a smooth coastline and a real sea floor from NOAA ETOPO.
@@ -87,6 +87,18 @@ It's built for:
 | **In-game map.** Career map art for every stage of the campaign. | **Factions.** Names, flags, badges, ranks and awards. |
 | ![The bake window showing each stage's progress](docs/images/gui-bake.jpg) | ![The game's career Headquarters screen over the generated map](docs/images/career-headquarters.jpg) |
 | **Bake.** Every stage has its own progress bar, and unchanged stages are reused. | **In game.** Career Headquarters on the finished map. |
+| ![The Look step with a test square of the map baked in its Square tab](docs/images/look-test-bake.jpg) | ![The Look step's Mockup town tab with every Look row in it](docs/images/look-mockup-town.jpg) |
+| **Look: test squares.** Tabs across the Look picture: a Square tab for each piece of your map you bake (+ adds one, the cog sets its size). Each is baked once; every Look change after that is redrawn on it in seconds, with no bake. | **Look: Mockup town.** A predefined 1 x 1 km seaside town with every Look row in it, on relief with a sea cliff, drawn from your picks. Nothing bakes. |
+| ![The Mockup town drawn with the Rheinland spring tile set](docs/images/look-mockup-seasons.jpg) | ![Auto populate placing real towns and airfields over Crete](docs/images/gui-auto-populate-crete.jpg) |
+| **Look: Vanilla Template.** One pick sets every row to a stock map and season (here Rheinland spring), from the textures in your own install. | **Auto populate.** Real towns and airfields placed over the map from OpenStreetMap; settlements on the map's sea are left out. |
+| ![The Buildings step over Sydney: Update coverage, the outline buttons and the town list](docs/images/gui-buildings-sydney.jpg) | ![The in-game map tab over Sydney: five periods of fronts, thrust arrows and unit markers](docs/images/gui-ingame-map-sydney.jpg) |
+| **Buildings.** Update coverage first; then outline the towns and woods and draw the rivers for the in-game map. | **In-game map.** Fronts, thrusts and unit markers for each period, drawn the way the career map shows them. |
+| ![Sydney Region listed as a theatre in IL-2's career screen](docs/images/career-theatre-sydney.jpg) | ![The career's starting phase map of Sydney Region with the plan's arrows](docs/images/career-phase-sydney.jpg) |
+| **In game: Sydney Region.** The baked map listed as a theatre of the career, Australia against Japan. | **Starting phase.** The career's phase map, with the fronts and thrusts drawn in the Campaign tab. |
+| ![The career Headquarters screen over the Sydney Region map](docs/images/career-headquarters-sydney.jpg) | ![A fighter flying over the Sydney Region map at dusk](docs/images/flight-sydney-dusk.jpg) |
+| **Headquarters** on the Sydney Region map. | **Flying** over the Sydney Region map at dusk. |
+| ![A fighter at dusk over a river valley on the Tasmania map](docs/images/flight-tasmania-dusk.jpg) | ![A G4M bomber over the jungle coast and rivers on the Papua New Guinea map](docs/images/flight-png-coast.jpg) |
+| **Tasmania.** Dusk over a river valley on the Tasmania map. | **Papua New Guinea.** Jungle, beaches and rivers on the PNG map. |
 
 ## What you need
 
@@ -101,19 +113,20 @@ Nothing from the game ships with the Plotting Table. It reads what it needs from
 
 ## Quick start
 
-1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.1.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
-2. **Run `installer.bat`.** The first start sets up its own Python 3.13 environment (with a private Python 3.13 if your PC has none), which takes a few hundred MB and a few minutes. After that, open the Plotting Table from the `Pingu's PT Installer` shortcut it creates, with no terminal window. The setup window names each step and each file as it downloads.
+1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.2.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
+2. **Run `installer.bat`.** The first start sets up its own Python 3.13 environment (with a private Python 3.13 if your PC has none), which takes a few hundred MB and a few minutes. After that, open the Plotting Table from the `Pingu's PT` shortcut it creates, with no terminal window. The setup window names each step and each file as it downloads.
 3. **Let it read your game.** On first start it asks for your language, finds your IL-2 install, and reads its maps, planes and skins once.
 4. **Make a map.** In the Map tab, pick a starting map, drag the box over your place, choose the look, and add airfield strips.
 5. **Set up the campaign.** Define your factions and dates in Scenario, then fronts and squadrons in Campaign. **Ask Pingu**, bottom right, explains each step.
-6. **Bake.** Press **Lift off** (Ctrl+B). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.1]` as a new, disabled folder (the number after `v` is the app's version; a rebuild of the same map is `<Map Name> 2 [Pingu'sPTv1.1]`).
+6. **Bake.** Press **Lift off** (Ctrl+B). The pack lands in `<game>\MODS\<Map Name> [Pingu'sPTv1.2]` as a new, disabled folder (the number after `v` is the app's version; a rebuild of the same map is `<Map Name> 2 [Pingu'sPTv1.2]`).
 7. **Fly.** Close IL-2 and its editor, enable the pack last in JSGME, then start the game. Your map is a new career theatre and quick-mission setting.
 
 Run `installer.bat` again after each update, because it installs any new libraries. The [user guide](docs/USER_GUIDE.md) has every tab, option and file in detail.
 
 ## Good to know
 
-- **Multiplayer needs the same pack everywhere.** Every pack carries a dedicated-server kit (`<Map Name> server [Pingu'sPTv1.1]`). The server and every player need the same pack, and each player must own the base map. It is not yet tried on a real dedicated server.
+- **PWCG has fixed limits.** PWCG's own program fixes map area, front dates and ground troops, so a pack can't change them.
+- **Multiplayer needs the same pack everywhere.** Every pack carries a dedicated-server kit (`<Map Name> server [Pingu'sPTv1.2]`). The server and every player need the same pack, and each player must own the base map. It is not yet tried on a real dedicated server.
 - **Roads are modern.** The road and rail network comes from today's OpenStreetMap, not 1942's.
 - **Fly each new map once.** The build checks the pack's files, but only the game can confirm it all loads.
 - **Prokhorovka** can't be used as a starting map yet, because of its finer 12.5 m grid.
@@ -149,7 +162,7 @@ Yes. The Plotting Table is built and tested on Python 3.13, so it never runs on 
 <details>
 <summary><b>Can I fly my map in multiplayer?</b></summary>
 
-Yes, on a dedicated server, though it is not yet tried on a real one. Every pack carries a kit at its root, `<Map Name> server [Pingu'sPTv1.1]`, with the same GB Mod Loader 1.5.0 (`winmm.dll` + `GBML.dll`; it runs under `DServer.exe` too), the SHA-256 of every map file, and `Check map files.bat`.
+Yes, on a dedicated server, though it is not yet tried on a real one. Every pack carries a kit at its root, `<Map Name> server [Pingu'sPTv1.2]`, with the same GB Mod Loader 1.5.0 (`winmm.dll` + `GBML.dll`; it runs under `DServer.exe` too), the SHA-256 of every map file, and `Check map files.bat`.
 
 1. **Server:** enable the same pack in the server's IL-2 install with JSGME (its `bin\game` already holds the loader) and turn Mods ON in `startup.cfg`.
 2. **Every player:** enable the same pack (same name and number), with no other GB Mod Loader plugins than the server's: the loader's handshake kicks a player whose mod set differs, and the map plugin only acts online in a verified session. You need to own the base map: the map plugin only lets the new terrain in when your own account unlocks that map.

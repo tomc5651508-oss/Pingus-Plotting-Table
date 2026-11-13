@@ -1,5 +1,21 @@
 # Changelog
 
+## Release1.2 (2026-11-14)
+
+- **Look step:** pick the ground tiles, farmland, woods, grass, sand, sea, rivers, trees, and the buildings and ground of each kind of town, from the stock maps you own or your own mix.
+- **Vanilla and Custom templates:** one click sets every row to a stock map and season. Save your own mix as a template.
+- **Test squares:** bake a 1 x 1 km square of the map (up to 5 km) in a few minutes; every Look change after that is redrawn on it in seconds, with no bake. Add more squares as tabs.
+- **Mockup town:** a ready-made seaside town with every Look row in it, sea cliff included. It needs no bake.
+- **1940s towns:** today's sprawl is cut back by road distance from each town label. Old centres stay whole and the cut suburbs become farmland. No orphan roads, no houses in the sea.
+- **In-game map:** outline towns and woods and draw rivers and lakes, smoothed the way the stock maps draw them.
+- **Campaign toolbar:** the tools sit under tabs (Frontlines and Periods, Battles, Defence and Assault zones, Arrows, Units). The Allied / Axis switch sits beside them and the whole lower bar takes the side's colour. Arrow tools have icons drawn the way the map draws them.
+- **Periods:** a new campaign's first period runs one month; an added period starts the day after the last one ends.
+- **Map data:** the app asks before it downloads OpenStreetMap for an area, says how big it is, and shows the progress. Update coverage is the Buildings step's main button.
+- **Updates:** at start the app checks for a newer release and can update only the files that changed.
+- **Save Logs to Zip:** one button on the bottom bar bundles the map and bake logs for a bug report.
+- **Jungle Hawks datapack** in every release.
+- **Fixes:** far-view pop-in of small buildings, runway beds on every starting map, land below sea level, ground tiles that join as on the stock maps, an airfield near the map's edge, outlines cut short, and a sketched front let go off the map.
+
 ## Release1.1 (2026-11-11)
 
 The first full release of Pingu's Plotting Table: A Mapper's Toolkit, made for IL-2 Sturmovik: Great Battles.
