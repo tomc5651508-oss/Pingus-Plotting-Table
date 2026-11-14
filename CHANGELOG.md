@@ -1,5 +1,14 @@
 # Changelog
 
+## Release1.2.1 (2026-11-14)
+
+- **Update coverage fixed:** in 1.2 the button did nothing and the Campaign tab stayed locked. It now starts the map data download, and the Campaign tab opens when it finishes.
+- **A map name used before on another starting map** no longer stops the preparation at Pre-bake preview layers.
+- **Map data:** a tick list of the OpenStreetMap extracts the map needs, with each one's share of the map, its size, and whether it is already downloaded. Small corner extracts start unticked. Extracts are chosen by the map's land only, so sea inside a country's outline no longer pulls in a whole country, and a big bundle such as US South gives way to the state extracts.
+- **Big extracts** are read for the map's area only.
+- **Progress:** each stage shows its latest step, and downloads show MB done, MB/s and the time left.
+- **Fronts:** Unlock brings the front tools back at once.
+
 ## Release1.2 (2026-11-14)
 
 - **Look step:** pick the ground tiles, farmland, woods, grass, sand, sea, rivers, trees, and the buildings and ground of each kind of town, from the stock maps you own or your own mix.

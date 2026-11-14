@@ -10,7 +10,7 @@
 
 [Download](../../releases/latest) · [Quick start](#quick-start) · [What it does](#what-it-does) · [A look around](#a-look-around) · [FAQ](#faq) · [User guide](docs/USER_GUIDE.md) · [Buy me a coffee](https://buymeacoffee.com/pingu565)
 
-![Version](https://img.shields.io/badge/version-Release1.2-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
+![Version](https://img.shields.io/badge/version-Release1.2.1-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
 
 ![A real coastline, towns and sea floor baked into IL-2 Great Battles](docs/images/hero-coast.jpg)
 
@@ -113,7 +113,7 @@ Nothing from the game ships with the Plotting Table. It reads what it needs from
 
 ## Quick start
 
-1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.2.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
+1. **Get the Plotting Table.** Download `Pingus-Plotting-Table-Release1.2.1.zip` from [Releases](../../releases/latest) and unzip it anywhere. This repository holds the documentation and pictures; the program itself comes as that zip.
 2. **Run `installer.bat`.** The first start sets up its own Python 3.13 environment (with a private Python 3.13 if your PC has none), which takes a few hundred MB and a few minutes. After that, open the Plotting Table from the `Pingu's PT` shortcut it creates, with no terminal window. The setup window names each step and each file as it downloads.
 3. **Let it read your game.** On first start it asks for your language, finds your IL-2 install, and reads its maps, planes and skins once.
 4. **Make a map.** In the Map tab, pick a starting map, drag the box over your place, choose the look, and add airfield strips.
