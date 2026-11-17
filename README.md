@@ -12,9 +12,11 @@
 
 ![Version](https://img.shields.io/badge/version-Release1.2.2-005faf) ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-5a6f8a) ![Game](https://img.shields.io/badge/IL--2-Great%20Battles-7ea0c8) ![Licence](https://img.shields.io/badge/licence-closed%20source%20open%20beta-9db27a) [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20Pingu's%20mods-ffd7af?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/pingu565)
 
-![A real coastline, towns and sea floor baked into IL-2 Great Battles](docs/images/hero-coast.jpg)
+![The Look step with the new Western Desert set: sand tiles, palms and North African flat-roofed houses on the Mockup town](docs/images/hero-desert-look.jpg)
 
-<sub>A real coastline with its towns and sea floor, baked from open data and seen in game.</sub>
+![A 5 x 5 km test bake of Tobruk with the Western Desert set](docs/images/hero-desert-tobruk.jpg)
+
+<sub>New in Release1.2.2: the Western Desert set. Above, the Look step on the Mockup town; below, a 5 x 5 km test bake of Tobruk.</sub>
 
 </div>
 
