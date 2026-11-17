@@ -1,5 +1,13 @@
 # Changelog
 
+## Release1.2.2 (2026-11-17)
+
+- **Western Desert tile set:** a new entry in the Tile set list. Stony hardpan, dark stone pavement, sand sheets with dune ridges and dry wadis with scrub, with its own slopes, beach sand and a sand sea floor.
+- **North African houses:** flat-roofed box houses with parapets, some with a second storey, a tower or an outside stair, in sand plaster with doors and dark windows. Picked with the Western Desert set; also in the Buildings list.
+- **Palm trees:** sparse palms for the Western Desert set (the Jungle Hawks palms), at 25 % tree density.
+- **Sand town ground** under the buildings of the Western Desert set, with no green yards.
+- **Fixed:** the tree density setting was not kept, so every map baked its trees at 100 %.
+
 ## Release1.2.1 (2026-11-14)
 
 - **Update coverage fixed:** in 1.2 the button did nothing and the Campaign tab stayed locked. It now starts the map data download, and the Campaign tab opens when it finishes.
