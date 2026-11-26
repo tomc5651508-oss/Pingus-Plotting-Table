@@ -1,5 +1,10 @@
 # Changelog
 
+## Release1.2.3 (2026-11-26)
+
+- **GB Mod Loader for the 25 Nov IL-2 update:** the game update stopped GB Mod Loader 1.5.0, so no modified map loaded. The Plotting Table now ships GB Mod Loader 1.6.0 and loosemaps 1.0.3 (Dusty's fix, the same files Jungle Hawks v2.5 ships), with the Jungle Hawks multiplayer and dedicated-server settings in gbml.ini.
+- **Packs you already built get the new loader:** at start, every Plotting Table pack and its server kit gets the new loader files. A pack that is enabled in JSGME: if the update card names it, disable it and enable it again.
+
 ## Release1.2.2 (2026-11-17)
 
 - **Western Desert tile set:** a new entry in the Tile set list. Stony hardpan, dark stone pavement, sand sheets with dune ridges and dry wadis with scrub, with its own slopes, beach sand and a sand sea floor.
